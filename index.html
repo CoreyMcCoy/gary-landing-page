@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gary – Turn missed calls into booked jobs</title>
+<meta name="description" content="Gary texts back every missed call in under 30 seconds, answers the homeowner's questions, and books the job on your calendar.">
+<meta name="theme-color" content="#F4F5FB">
+
+<link rel="canonical" href="https://letgarybook.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gary">
+<meta property="og:url" content="https://letgarybook.com/">
+<meta property="og:title" content="Gary – Turn missed calls into booked jobs">
+<meta property="og:description" content="Gary texts back every missed call in under 30 seconds, answers the homeowner's questions, and books the job on your calendar.">
+<meta property="og:image" content="https://letgarybook.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gary, the cartoon mascot holding a phone, next to the headline: You missed the call. Gary didn't.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gary – Turn missed calls into booked jobs">
+<meta name="twitter:description" content="Gary texts back every missed call in under 30 seconds, answers the homeowner's questions, and books the job on your calendar.">
+<meta name="twitter:image" content="https://letgarybook.com/assets/og-image.png">
+<meta name="twitter:image:alt" content="Gary, the cartoon mascot holding a phone, next to the headline: You missed the call. Gary didn't.">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Font stylesheet loads without blocking first paint; text shows in the fallback font until it arrives -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Figtree:wght@400;500;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Figtree:wght@400;500;700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="styles.css">
+<script src="demo-video.js" defer></script>
+<script src="job-value.js" defer></script>
+</head>
+<body>
+
+<header class="container site-header">
+  <div class="brand">
+    <picture>
+      <source srcset="assets/gary-96.webp" type="image/webp">
+      <img src="assets/gary-96.png" alt="" width="44" height="44">
+    </picture>
+    <span class="brand-name">Gary</span>
+  </div>
+  <nav class="site-nav" aria-label="Main">
+    <a href="#how">How it works</a>
+    <a href="#demo">Demo</a>
+    <a href="#handoff">When you're needed</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+  <a class="button button--dark button--nav" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-copy">
+      <p class="pill">For roofers, plumbers, HVAC, electricians and every trade that can't stop to answer</p>
+      <h1 class="hero-title">You missed the call. Gary didn't.</h1>
+      <p class="hero-lede">When you can't pick up, Gary texts the homeowner back in under 30 seconds, answers their questions, and books the job on your calendar. Before they call the next guy on Google.</p>
+      <div class="hero-actions">
+        <a class="button button--dark button--hero" href="#start">Stop losing jobs</a>
+        <a class="button button--outline button--hero" href="#how">See how it works</a>
+      </div>
+      <p class="hero-note">Keeps your number. No new phone. No contract.</p>
+    </div>
+
+    <!-- Phone conversation -->
+    <div class="phone-wrap">
+      <div class="phone" role="img" aria-label="Example text conversation: Gary replies to a missed call for Ace Roofing and books a Thursday 1pm inspection.">
+        <div class="phone-header">
+          <picture>
+            <source srcset="assets/gary-96.webp" type="image/webp">
+            <img src="assets/gary-96.png" alt="" width="36" height="36">
+          </picture>
+          <div class="phone-contact">
+            <span class="phone-contact-name">Ace Roofing</span>
+            <span class="phone-contact-status">Missed call · 2:14 PM</span>
+          </div>
+        </div>
+        <div class="bubble bubble--business">Hey, this is Ace Roofing. Sorry we missed you, we're on a job. What can we help with?</div>
+        <div class="bubble bubble--customer">Got a leak over the garage after last night's storm. Do you do repairs or just full roofs?</div>
+        <div class="bubble bubble--business">We do repairs. Inspections are free. I can get someone out Thursday at 9am or 1pm. Which works?</div>
+        <div class="bubble bubble--customer">1pm</div>
+        <div class="bubble bubble--business">Done. You're booked Thursday at 1pm. Send a photo of the leak if you can, it helps us bring the right stuff.</div>
+        <div class="pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"></path></svg>
+          Added to your calendar
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSED-CALL CALCULATOR -->
+  <section class="calculator" aria-labelledby="calculator-heading">
+    <h2 id="calculator-heading" class="visually-hidden">Missed-call calculator</h2>
+    <div class="container job-value" data-monthly-price="500">
+      <div class="job-value-inputs">
+        <div class="job-value-field">
+          <div class="job-value-label">
+            <label for="job-value-input">What's your average job worth?</label>
+            <output id="job-value-output" for="job-value-input">$500</output>
+          </div>
+          <input id="job-value-input" type="range" min="250" max="2000" step="10" value="500" aria-valuetext="$500">
+        </div>
+        <div class="job-value-field">
+          <div class="job-value-label">
+            <label for="missed-calls-input">How many calls do you miss a week?</label>
+            <output id="missed-calls-output" for="missed-calls-input">4</output>
+          </div>
+          <input id="missed-calls-input" type="range" min="1" max="30" step="1" value="4">
+        </div>
+      </div>
+      <p class="job-value-result" aria-live="polite">Gary pays for itself if it books <strong id="jobs-needed">1</strong> of the <strong id="missed-per-month">17</strong> calls you miss each month.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="container how">
+    <h2 class="display-heading section-heading">Here's what happens when you miss a call.</h2>
+    <ol class="step-grid">
+      <li class="step">
+        <span class="step-number" aria-hidden="true">1</span>
+        <h3 class="step-title">Gary texts back in under 30 seconds</h3>
+        <p class="step-text">From your business number. The homeowner hears from you while they're still looking at their phone.</p>
+      </li>
+      <li class="step">
+        <span class="step-number" aria-hidden="true">2</span>
+        <h3 class="step-title">Answers their questions with your info</h3>
+        <p class="step-text">Your services, your pricing, your availability. Not generic answers. The ones you'd give.</p>
+      </li>
+      <li class="step">
+        <span class="step-number" aria-hidden="true">3</span>
+        <h3 class="step-title">Books the job</h3>
+        <p class="step-text">Straight into your calendar. Or gets photos of the problem so you show up ready.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- DEMO VIDEO -->
+  <section id="demo" class="container demo">
+    <div class="demo-intro">
+      <h2 class="display-heading section-heading section-heading--small">Watch Gary turn a missed call into a booked job.</h2>
+    </div>
+    <!--
+      PLACEHOLDER [DEMO VIDEO]: put a YouTube, Vimeo or .mp4 URL in data-video-src.
+      The poster below stays until the visitor presses play; nothing loads before that.
+    -->
+    <div class="video-frame" data-video-src="" data-video-title="Gary demo: a missed call turned into a booked job">
+      <picture>
+        <source type="image/webp" srcset="assets/gary-400.webp 400w, assets/gary-600.webp 600w" sizes="(min-width: 1160px) 380px, 34vw">
+        <img class="video-poster-mascot" src="assets/gary-600.png" srcset="assets/gary-400.png 400w, assets/gary-600.png 600w" sizes="(min-width: 1160px) 380px, 34vw" alt="" width="600" height="600" loading="lazy" decoding="async">
+      </picture>
+      <div class="video-poster-caption">
+        <span class="pill">[DEMO VIDEO]</span>
+        <span class="video-poster-title">2:14 PM. Phone rings. Nobody picks up.</span>
+      </div>
+      <button type="button" class="video-play" aria-label="Play demo video">
+        <svg viewBox="0 0 24 24" fill="#1B1F3B" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="container problem-intro">
+      <div class="problem-headline">
+        <h2 class="display-heading section-heading">Every missed call is a $280 to $1,174 job walking out the door.</h2>
+        <ul class="job-tags">
+          <li>Plumbing job · avg $280</li>
+          <li>HVAC repair · avg $350</li>
+          <li>Roof repair · avg $1,174</li>
+        </ul>
+      </div>
+      <div class="problem-story">
+        <p>You're on a roof. Under a sink. Driving between jobs. The phone rings and you can't get it.</p>
+        <p>The homeowner doesn't leave a voicemail. They hang up and call the next company on the list. By the time you call back, they've already booked someone.</p>
+        <p class="emphasis">You paid for that lead. Ads, your truck wrap, your Google listing. Then you lost it because you were busy doing the work.</p>
+      </div>
+    </div>
+    <div class="container problem-stats">
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-value">27%</span>
+          <span class="stat-label">of calls to home service businesses go unanswered.</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">&lt;3%</span>
+          <span class="stat-label">of callers sent to voicemail actually leave a message.</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">20%</span>
+          <span class="stat-label">of home service businesses reply to a new lead within an hour. Gary does it in 30 seconds.</span>
+        </div>
+      </div>
+      <p class="sources">Sources: job averages from Angi (HVAC, roof repair) and HomeGuide (plumbing), 2026. Unanswered calls and voicemail from Invoca call data, 2024. Lead response from Jobber's survey of 1,050 home service owners, Dec 2025.</p>
+    </div>
+  </section>
+
+  <!-- HANDOFF -->
+  <section id="handoff" class="container handoff">
+    <div class="handoff-card">
+      <picture>
+        <source srcset="assets/gary-400.webp" type="image/webp">
+        <img src="assets/gary-400.png" alt="Gary, holding a phone" width="200" height="200" loading="lazy" decoding="async">
+      </picture>
+      <div class="handoff-copy">
+        <h2 class="display-heading section-heading section-heading--small">When it needs you, Gary hands it over.</h2>
+        <p>Weird question, big job, upset customer. Gary stops and sends you the whole conversation. You pick it up knowing exactly what they need. No starting cold.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET + PRICING -->
+  <section id="pricing" class="features">
+    <div class="container features-inner">
+      <h2 class="display-heading section-heading section-heading--small">What you get</h2>
+      <ul class="feature-grid">
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Every missed call gets a text</span><span class="feature-detail">Nights, weekends, while you're on a ladder.</span></div>
+        </li>
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Knows your business</span><span class="feature-detail">Services, pricing, availability, FAQs.</span></div>
+        </li>
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Books into your calendar</span><span class="feature-detail">No back-and-forth to find a time.</span></div>
+        </li>
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Uses the number you already have</span><span class="feature-detail">Customers never know anything changed.</span></div>
+        </li>
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Full conversation when you step in</span><span class="feature-detail">Read it in 10 seconds, then call them back.</span></div>
+        </li>
+        <!-- UNCONFIRMED: check with the owner that confirmation emails go to both the owner and the customer before shipping -->
+        <li class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E3566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="feature-text"><span class="feature-title">Confirmation emails</span><span class="feature-detail">To you and the customer, every booking.</span></div>
+        </li>
+      </ul>
+      <div class="price-row">
+        <p class="price-value">$500<span class="price-period">/mo</span></p>
+        <a class="button button--dark button--hero" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="start" class="container cta">
+    <h2 class="display-heading cta-title">The next call you miss could be your best job this month.</h2>
+    <p>Let Gary catch it.</p>
+    <a class="button button--dark button--cta" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <span>© 2026 Gary</span>
+    <a href="mailto:hello@letgarybook.com">hello@letgarybook.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
