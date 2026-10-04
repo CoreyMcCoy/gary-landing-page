@@ -5,6 +5,7 @@ Static marketing site. No build step: upload this folder as-is to any static hos
 - `index.html`: the page
 - `styles.css`: all styles; brand colors are tokens on `:root`
 - `demo-video.js`: creates the demo player when the visitor presses play
+- `privacy.html`, `terms.html`, `sms.html`: legal pages, linked from every footer. Their placeholders are in square brackets in the text.
 - `job-value.js`: the missed-call calculator under the hero
 - `assets/`: mascot in WebP with PNG fallback (96, 400, 600 px), favicon, touch icon, share image
 - `assets/gary.png`: original full-size mascot, kept as the source file. The page doesn't use it.
