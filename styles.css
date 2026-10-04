@@ -946,6 +946,11 @@ p {
   color: var(--muted);
 }
 
+/* Pages with no date, like the SMS disclosure, start their text right after the title */
+.legal-title + p {
+  margin-top: 12px;
+}
+
 .legal h2 {
   margin-top: 40px;
   margin-bottom: 8px;
