@@ -599,25 +599,6 @@ p {
   padding-bottom: 96px;
 }
 
-.demo-intro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 40px;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.demo-intro .section-heading {
-  max-width: 620px;
-}
-
-.demo-intro p {
-  max-width: 380px;
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--body-text);
-}
-
 .video-frame {
   position: relative;
   width: 100%;
@@ -840,34 +821,13 @@ p {
   color: var(--body-text);
 }
 
-/* Price, at the end of "What you get" */
+/* Call to action, at the end of "What you get" */
 
-.price-row {
+.features-action {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px 32px;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 40px;
   border-top: 2px solid var(--line);
-}
-
-.price-value {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(44px, 5vw, 64px);
-  line-height: 1;
-  letter-spacing: -1.5px;
-  color: var(--ink);
-}
-
-.price-period {
-  margin-left: 4px;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 22px;
-  letter-spacing: 0;
-  color: var(--muted);
 }
 
 /* Final call to action */
