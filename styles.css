@@ -947,3 +947,24 @@ p {
 .legal a {
   overflow-wrap: anywhere;
 }
+
+/* Optional text demo and non-SMS alternatives */
+.sms-demo {
+  max-width: 860px;
+  padding-top: 48px;
+  padding-bottom: 72px;
+  color: var(--body-text);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.sms-demo p + p,
+.sms-demo .hero-actions,
+.sms-demo .hero-actions + p {
+  margin-top: 20px;
+}
+.sms-demo a {
+  overflow-wrap: anywhere;
+}
+.sms-demo .hero-actions {
+  flex-wrap: wrap;
+}
