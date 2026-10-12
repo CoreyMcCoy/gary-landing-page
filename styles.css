@@ -710,6 +710,66 @@ p {
   color: var(--body-text);
 }
 
+/* Phones: tighter spacing for the whole home page. The desktop spacing above
+   leaves too much empty space on a small screen, so every section gets less
+   room above and below, and the hero's intro text is a little smaller. */
+@media (max-width: 559px) {
+  .hero {
+    gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+
+  .hero-lede {
+    font-size: 18px;
+  }
+
+  .job-value {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .how {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .problem-intro {
+    gap: 32px;
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
+
+  .problem-stats {
+    padding-bottom: 64px;
+  }
+
+  .handoff {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .handoff-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .handoff-copy p {
+    font-size: 17px;
+  }
+
+  .features-inner {
+    gap: 32px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .cta {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
 /* Footer */
 
 .site-footer {
