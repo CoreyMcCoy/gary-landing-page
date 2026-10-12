@@ -215,21 +215,11 @@ p {
   font-size: 16px;
 }
 
-/* Phones: logo and "Book a demo" share the top row, links sit below */
+/* Phones: only the logo and "Hire Gary" show in the header. The hero's
+   "See how it works" button covers the first link. */
 @media (max-width: 639px) {
-  .site-header {
-    row-gap: 12px;
-  }
-
-  .site-header .button--nav {
-    order: 2;
-  }
-
   .site-nav {
-    order: 3;
-    width: 100%;
-    gap: 8px 20px;
-    font-size: 15px;
+    display: none;
   }
 }
 
@@ -239,7 +229,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 48px;
   padding-bottom: 72px;
 }
@@ -280,90 +270,97 @@ p {
   align-items: center;
 }
 
+/* When the copy sits beside the video, drop it down so it
+   doesn't start right under the header. They sit side by side from 986px of page width;
+   1010px leaves room for a scrollbar. Below that, the video sits under the copy. */
+@media (min-width: 1010px) {
+  .hero-copy {
+    margin-top: 80px;
+  }
+}
+
+/* Phones: the two hero buttons share one row and split it evenly.
+   On the narrowest phones they wrap and stack at full width. */
+@media (max-width: 559px) {
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions .button--hero {
+    flex: 1 1 auto;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
+}
+
 .hero-note {
   font-size: 15px;
   color: var(--muted);
 }
 
-/* Hero phone conversation */
+/* Hero video */
 
-.phone-wrap {
-  flex: 1 1 340px;
+.hero-video-wrap {
+  flex: 1 1 370px;
   min-width: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.phone {
+.hero-video-frame {
+  position: relative;
   width: 100%;
-  max-width: 360px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px 16px 24px;
-  background: var(--white);
+  max-width: 370px;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: var(--ink);
   border: 3px solid var(--navy);
-  border-radius: 36px;
+  border-radius: 28px;
   box-shadow: 0 24px 60px rgba(46, 53, 102, 0.18);
 }
 
-.phone-header {
+.hero-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-sound {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 4px 4px 12px;
-  border-bottom: 1px solid var(--line);
-}
-
-.phone-header img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  background: var(--bubble);
+  justify-content: center;
+  border: none;
   border-radius: 50%;
+  background: rgba(27, 31, 59, 0.75);
+  cursor: pointer;
 }
 
-.phone-contact {
-  display: flex;
-  flex-direction: column;
+.hero-video-sound[hidden] {
+  display: none;
 }
 
-.phone-contact-name {
-  font-weight: 700;
-  font-size: 15px;
+.hero-video-sound:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
-.phone-contact-status {
-  font-size: 13px;
-  color: var(--muted);
+.hero-video-sound-on,
+.hero-video-sound[aria-pressed="true"] .hero-video-sound-off {
+  display: none;
 }
 
-.bubble {
-  max-width: 85%;
-  padding: 10px 14px;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.bubble--business {
-  align-self: flex-start;
-  background: var(--bubble);
-  border-radius: 18px 18px 18px 4px;
-}
-
-.bubble--customer {
-  align-self: flex-end;
-  background: var(--navy);
-  color: var(--white);
-  border-radius: 18px 18px 4px 18px;
-}
-
-.phone .pill {
-  align-self: center;
-  gap: 6px;
-  margin-top: 4px;
-  padding: 6px 12px;
-  font-size: 13px;
+.hero-video-sound[aria-pressed="true"] .hero-video-sound-on {
+  display: block;
 }
 
 /* Problem */
@@ -590,140 +587,6 @@ p {
   color: var(--body-text);
 }
 
-/* Demo video */
-
-.demo {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-bottom: 96px;
-}
-
-.video-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: var(--ink);
-  border: 3px solid var(--navy);
-  border-radius: 28px;
-}
-
-.video-poster-mascot {
-  position: absolute;
-  right: 4%;
-  bottom: -6%;
-  width: 34%;
-  max-width: 380px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.95;
-}
-
-.video-poster-caption {
-  position: absolute;
-  left: 5%;
-  top: 8%;
-  max-width: 52%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.video-poster-caption .pill {
-  align-self: flex-start;
-  padding: 6px 12px;
-  font-size: 13px;
-}
-
-.video-poster-title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(20px, 3vw, 40px);
-  line-height: 1.05;
-  color: var(--white);
-}
-
-.video-play {
-  position: relative;
-  width: 96px;
-  height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-}
-
-.video-play svg {
-  width: 36px;
-  height: 36px;
-}
-
-.video-play:focus-visible {
-  outline: 3px solid var(--white);
-  outline-offset: 4px;
-}
-
-.video-player {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  background: var(--ink);
-}
-
-/* Phones: move the play button below the caption so they don't overlap */
-@media (max-width: 559px) {
-  .video-frame {
-    border-radius: 20px;
-  }
-
-  .video-poster-caption {
-    max-width: 62%;
-    gap: 8px;
-  }
-
-  .video-poster-caption .pill {
-    padding: 4px 10px;
-    font-size: 11px;
-  }
-
-  .video-poster-title {
-    font-size: 18px;
-  }
-
-  .video-play {
-    position: absolute;
-    left: 5%;
-    bottom: 9%;
-    width: 52px;
-    height: 52px;
-  }
-
-  .video-play svg {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-@media (max-width: 399px) {
-  .video-poster-caption {
-    max-width: 72%;
-  }
-
-  .video-poster-title {
-    font-size: 16px;
-  }
-}
-
 /* Handoff */
 
 .handoff {
@@ -819,15 +682,6 @@ p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--body-text);
-}
-
-/* Call to action, at the end of "What you get" */
-
-.features-action {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  border-top: 2px solid var(--line);
 }
 
 /* Final call to action */
@@ -948,9 +802,13 @@ p {
   overflow-wrap: anywhere;
 }
 
+.text-demo a {
+  white-space: nowrap;
+}
+
 .text-demo {
-  margin-top: 20px;
   text-align: center;
+  text-wrap: balance;
   font-size: 18px;
   line-height: 1.5;
   color: var(--body-text);

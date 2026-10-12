@@ -35,8 +35,9 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Figtree:wght@400;500;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Figtree:wght@400;500;700&amp;display=swap"></noscript>
 <link rel="stylesheet" href="styles.css">
-<script src="demo-video.js" defer></script>
+<script src="hero-video.js" defer></script>
 <script src="job-value.js" defer></script>
+<script src="cal-booking.js" defer></script>
 </head>
 <body>
 
@@ -52,7 +53,7 @@
     <a href="#how">How it works</a>
     <a href="#handoff">When you're needed</a>
   </nav>
-  <a class="button button--dark button--nav" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
+  <a class="button button--dark button--nav" href="https://cal.com/corey-mccoy/gary-demo" data-cal-link="corey-mccoy/gary-demo" data-cal-namespace="gary-demo" data-cal-config='{"layout":"month_view"}'>Hire Gary</a>
 </header>
 
 <main>
@@ -70,36 +71,23 @@
       <p class="hero-note">Works with your current phone and number. No contract.</p>
     </div>
 
-    <!-- Phone conversation -->
-    <div class="phone-wrap">
-      <div class="phone" role="img" aria-label="Example text conversation: Gary replies to a missed call for Ace Roofing and books a Thursday 1pm inspection.">
-        <div class="phone-header">
-          <picture>
-            <source srcset="assets/gary-96.webp" type="image/webp">
-            <img src="assets/gary-96.png" alt="" width="36" height="36">
-          </picture>
-          <div class="phone-contact">
-            <span class="phone-contact-name">Ace Roofing</span>
-            <span class="phone-contact-status">Missed call · 2:14 PM</span>
-          </div>
-        </div>
-        <div class="bubble bubble--business">Hey, this is Ace Roofing. Sorry we missed you, we're on a job. What can we help with?</div>
-        <div class="bubble bubble--customer">Got a leak over the garage after last night's storm. Do you do repairs or just full roofs?</div>
-        <div class="bubble bubble--business">We do repairs. Inspections are free. I can get someone out Thursday at 9am or 1pm. Which works?</div>
-        <div class="bubble bubble--customer">1pm</div>
-        <div class="bubble bubble--business">Done. You're booked Thursday at 1pm. Send a photo of the leak if you can, it helps us bring the right stuff.</div>
-        <div class="pill">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"></path></svg>
-          Added to your calendar
-        </div>
+    <!-- Hero video: the browser autoplays it muted and looping; the button turns the sound on -->
+    <div class="hero-video-wrap">
+      <div class="hero-video-frame">
+        <video class="hero-video" src="assets/hero-video.mp4" poster="assets/hero-video-poster.webp" width="720" height="1280" autoplay muted loop playsinline aria-label="A homeowner calls Ace Roofing and nobody picks up. Gary texts them back, answers their question, and books an inspection for tomorrow at 1pm. The booking shows up on the owner's calendar."></video>
+        <button type="button" class="hero-video-sound" aria-pressed="false" aria-label="Turn sound on">
+          <svg class="hero-video-sound-off" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="m23 9-6 6M17 9l6 6"></path></svg>
+          <svg class="hero-video-sound-on" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 5a10 10 0 0 1 0 14"></path></svg>
+        </button>
       </div>
+      <p class="text-demo">Try Gary by texting <strong>DEMO</strong> to <a href="sms:+12544002952?body=DEMO">(254) 400-2952</a>.</p>
     </div>
   </section>
 
   <!-- MISSED-CALL CALCULATOR -->
   <section class="calculator" aria-labelledby="calculator-heading">
     <h2 id="calculator-heading" class="visually-hidden">Missed-call calculator</h2>
-    <div class="container job-value" data-monthly-price="500">
+    <div class="container job-value" data-monthly-price="625">
       <div class="job-value-inputs">
         <div class="job-value-field">
           <div class="job-value-label">
@@ -140,24 +128,6 @@
         <p class="step-text">Straight into your calendar. Or gets photos of the problem so you show up ready.</p>
       </li>
     </ol>
-  </section>
-
-  <!-- DEMO VIDEO -->
-  <section id="demo" class="container demo">
-    <!-- The poster below stays until the visitor presses play; nothing loads before that. -->
-    <div class="video-frame" data-video-src="https://res.cloudinary.com/corey-mccoy/video/upload/v1791498775/gary-demo/brag_pepy0w.mp4" data-video-title="See how it works">
-      <picture>
-        <source type="image/webp" srcset="assets/gary-400.webp 400w, assets/gary-600.webp 600w" sizes="(min-width: 1160px) 380px, 34vw">
-        <img class="video-poster-mascot" src="assets/gary-600.png" srcset="assets/gary-400.png 400w, assets/gary-600.png 600w" sizes="(min-width: 1160px) 380px, 34vw" alt="" width="600" height="600" loading="lazy" decoding="async">
-      </picture>
-      <div class="video-poster-caption">
-        <span class="video-poster-title">2:14 PM. Phone rings. Nobody picks up.</span>
-      </div>
-      <button type="button" class="video-play" aria-label="Play video: See how it works">
-        <svg viewBox="0 0 24 24" fill="#1B1F3B" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
-      </button>
-    </div>
-    <p class="text-demo">Try Gary by texting <strong>DEMO</strong> to <a href="sms:+12544002952?body=DEMO">(254) 400-2952</a>.</p>
   </section>
 
   <!-- PROBLEM -->
@@ -241,9 +211,6 @@
           <div class="feature-text"><span class="feature-title">Confirmation emails</span><span class="feature-detail">Sent to you for every booking.</span></div>
         </li>
       </ul>
-      <div class="features-action">
-        <a class="button button--dark button--hero" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
-      </div>
     </div>
   </section>
 
@@ -251,7 +218,7 @@
   <section id="start" class="container cta">
     <h2 class="display-heading cta-title">The next call you miss could be your best job this month.</h2>
     <p>Let Gary catch it.</p>
-    <a class="button button--dark button--cta" href="https://cal.com/corey-mccoy/gary-demo">Book a demo</a>
+    <a class="button button--dark button--cta" href="https://cal.com/corey-mccoy/gary-demo" data-cal-link="corey-mccoy/gary-demo" data-cal-namespace="gary-demo" data-cal-config='{"layout":"month_view"}'>Hire Gary</a>
   </section>
 
 </main>
