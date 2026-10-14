@@ -6,6 +6,7 @@
     if (!toggle || !nav) return;
     toggle.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
   }
 
   if (toggle && nav) {
@@ -13,6 +14,13 @@
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", open ? "false" : "true");
       nav.classList.toggle("is-open", !open);
+      document.body.classList.toggle("nav-open", !open);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
