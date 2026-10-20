@@ -1214,8 +1214,13 @@ address {
 
 .site-footer .hours-list div {
   border-bottom-color: rgba(255, 255, 255, 0.12);
-  grid-template-columns: 148px 1fr;
+  grid-template-columns: 1fr;
+  gap: 4px;
   padding: 12px 0;
+}
+
+.site-footer .hours-list dd {
+  white-space: nowrap;
 }
 
 .site-footer .brand-sub,
